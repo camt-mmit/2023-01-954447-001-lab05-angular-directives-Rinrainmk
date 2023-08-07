@@ -1,36 +1,9 @@
-<h1>{{ title }} app is running!</h1>
+<header>
+    <nav>
+        <a routerLink="./dynamic-section" routerLinkActive="st-active">
+            Lab 5
+        </a>
+    </nav>
+</header>
 
 <router-outlet></router-outlet>
-
-  <div>
-  <ng-template ngFor [ngForOf]="[10,20,30]" let-value let-i="index">
-    {{ i }} : {{ value }}<br /> 
-  </ng-template>
-</div>
-
-<div>
-  <ng-container *ngFor="let value of [10,20,30]; let i=index">
-    {{ i }} : {{ value }}<br /> 
-  </ng-container>
-</div>
-  
-   <div *ngFor ="let value of[10,20,30]; let i =index">
-    {{ i }} : {{ value }}</div>
-
-  <ng-template ngFor [ngForOf]="products" let-product let-i="index">
-No. {{ i + 1 }} : [{{ product.code }}] {{ product.name }}<br />
-</ng-template>
-
-<div *ngFor="let product of products; let i=index">
-  No. {{ i + 1 }} : [{{ product.code }}] {{ product.name }}</div>
-
-  <div>
-    <ng-container *ngFor="let product of products; let i=index">
-      No. {{ i + 1 }} : [{{ product.code }}] {{ product.name }} <br />
-    </ng-container>
-  </div>
-
-  <div>
-    external : <output>{{ externalMessage }}</output> <br/>
-    <app-two-ways [(message)]="externalMessage" />
-  </div>
